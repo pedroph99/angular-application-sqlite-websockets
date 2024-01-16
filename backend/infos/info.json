@@ -1,0 +1,40 @@
+{
+    "heroes": [
+      {
+        "name": "Homem de Ferro",
+        "real_name": "Tony Stark",
+        "abilities": ["Genius-level intellect", "Powered armor suit", "Superhuman strength"],
+        "first_appearance": "Tales of Suspense #39",
+        "description": "Homem de ferro peso HAHAHHAHAHAHAHAH"
+      },
+      {
+        "name": "Capitão América",
+        "real_name": "Steve Rogers",
+        "abilities": ["Peak human strength", "Agility", "Master martial artist"],
+        "first_appearance": "Captain America Comics #1",
+        "description": "Homem de ferro peso HAHAHHAHAHAHAHAH"
+      },
+      {
+        "name": "Homem-Aranha",
+        "real_name": "Peter Parker",
+        "abilities": ["Wall-crawling", "Superhuman strength", "Spidey sense"],
+        "first_appearance": "Amazing Fantasy #15",
+        "description": "Homem de ferro peso HAHAHHAHAHAHAHAH"
+      },
+      {
+        "name": "Thor",
+        "real_name": "Thor Odinson",
+        "abilities": ["Superhuman strength", "Weather manipulation", "Flight"],
+        "first_appearance": "Journey into Mystery #83",
+        "description": "Homem de ferro peso HAHAHHAHAHAHAHAH"
+      },
+      {
+        "name": "Hulk",
+        "real_name": "Bruce Banner",
+        "abilities": ["Superhuman strength", "Invulnerability", "Regeneration"],
+        "first_appearance": "The Incredible Hulk #1",
+        "description": "Homem de ferro peso HAHAHHAHAHAHAHAH"
+      }
+ 
+    ]
+  }
