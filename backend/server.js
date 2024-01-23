@@ -35,7 +35,7 @@ const port = 3000; // Pode alterar para a porta desejada
 
 const upload = require('./middlewares/multerMid');
 const  uploadedit = require('./middlewares/multerMidEdit');
-
+const uploadExcell = require('./middlewares/multerMidExcell');
 app.use(express.json());
 app.use(express.urlencoded({
   extended: true
@@ -134,7 +134,45 @@ app.post('/herocreate/criar', upload.single('image'),  async (req,res) => {
     )
 
 
+app.post('/excell', uploadExcell.single('excell'))
 
+
+app.get('/excell/:name', (req, res) => {
+  {
+    console.log('req realizada');
+    const files = fs.readdirSync(path.join(__dirname, 'temp'))
+    var rightFile = null;
+    files.forEach((file) => {
+      console.log(file)
+      try{
+        if(file.split('.')[0] == req.params.name){
+          console.log('testing here')
+          rightFile = file;
+       }
+      }
+      catch{
+        console.log('invalid file.')
+      }
+      
+      if (rightFile != null){
+        console.log(path.join(__dirname, 'temp', rightFile))
+        res.sendFile(path.join(__dirname, 'temp', rightFile), function (err) {
+          if (err) {
+              console.error('Error sending file:', err);
+              console.log('ERRO AQUI Ó')
+          } else {
+              console.log('Sent:', rightFile);
+          }
+      })
+        console.log('testando temp')
+      }
+      
+    })
+  
+  
+  
+  }
+})
 
 // Inicia o servidor
 var server = http.listen(port, () => {
