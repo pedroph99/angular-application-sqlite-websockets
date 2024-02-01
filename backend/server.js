@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path')
 const fs = require('fs');
-
+const nodemailer = require("nodemailer");
 const Websocket = require('ws');
 // Cria uma instância do Express
 const app = express();
@@ -40,6 +40,7 @@ app.use(express.json());
 app.use(express.urlencoded({
   extended: true
 }))
+
 
 
 const heroesFunc = require('./database/getHeroes')
@@ -174,6 +175,31 @@ app.get('/excell/:name', (req, res) => {
   }
 })
 
+
+
+app.post('/email/send', uploadedit.single('image'), async (req,res) => {
+  let valores = [];
+
+  
+  const valores_keys = Object.keys(req.body);
+  valores_keys.forEach( (value) => valores.push(req.body[`${value}`]))
+
+  console.log(valores)
+
+ 
+
+  
+
+}
+
+
+ 
+  )
+
+app.get('/cotacoes/getcoins', (req,res) =>{
+  console.log('ok')
+  res.sendFile(path.join(__dirname, 'database', 'moedas', 'moedas.json'))
+})
 // Inicia o servidor
 var server = http.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
